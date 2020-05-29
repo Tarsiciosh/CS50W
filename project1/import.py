@@ -14,13 +14,13 @@ def main():
     i=0
     for isbn, title, author, year in reader:
         #print(f"isbn: {isbn} title: {title} author: {author} year: {year}")
-        if i >= 4000:
+        if i >= 0:
             db.execute("INSERT INTO books (isbn, title, author, year) VALUES (:isbn, :title, :author, :year)",
                 {"isbn": isbn , "title": title, "author": author, "year": year} )
         i+=1
-        if i == 6000: 
+        if i == 6000:
              break
- 
+
     db.commit()
 
 if __name__ == "__main__":
