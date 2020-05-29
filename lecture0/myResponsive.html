@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive</title>
+    <!-- <link rel="styleSheet" href="styles.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media print {
+            .screen-only {
+                display: none;
+            }
+        }
+
+        @media (min-width: 500px) {
+            body {
+                background-color: teal;
+            }
+
+            h1::before {
+                content: "welcome to my page!";
+            }
+        }
+
+        @media (max-width: 499px) {
+            body {
+                background-color: royalblue;
+            }
+
+            h1::before {
+                content: "welcome!";
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: darkslategray;
+            color:lightslategray;
+        }
+
+        .container>div {
+            background-color: darkolivegreen;
+            font-size: 20 px;
+            margin: 20px;
+            padding: 20px;
+            width: 100px;
+        }
+        .grid{
+            background-color: lime;
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-template-columns: 200px 200px auto;
+        }
+        .grid-item{
+            background-color: linen;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <p>fist paragraph</p>
+    <p>second paragraph</p>
+    <p class="screen-only">show only in screen not in printing</p>
+
+    <div class="container">
+        <div> A </div>
+        <div> B </div>
+        <div> C </div>
+        <div> D </div>
+        <div> E </div>
+        <div> F </div>
+    </div>
+
+    <br>
+    <div class="grid">
+        <div class="grid-item" > 1 </div>
+        <div class="grid-item" > 2 </div>
+        <div class="grid-item" > 3 </div>
+        <div class="grid-item" > 4 </div>
+        <div class="grid-item" > 5 </div>
+        <div class="grid-item" > 6 </div>
+        <div class="grid-item" > 7 </div>
+        <div class="grid-item" > 8 </div>
+        <div class="grid-item" > 9 </div>
+        <div class="grid-item" > 10 </div>
+        <div class="grid-item" > 11 </div>
+        <div class="grid-item" > 12 </div>
+    </div>
+</body>
+
+</html>

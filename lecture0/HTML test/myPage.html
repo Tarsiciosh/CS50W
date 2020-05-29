@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Tittle of the page </title>
+    <style>
+        #h1_1 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 10px;
+            color: darkgrey;
+            border-color: rgb(141, 130, 130);
+        }
+
+        #myDiv1 {
+            background-color: lightgrey;
+            padding: 10px;
+            padding-top: 5 px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 10px;
+            border-style: solid;
+            border-color: darkslateblue;
+        }
+
+        p {
+            color: blue;
+            background-color: darkblue;
+            padding: 15px;
+            font-family: Helvetica;
+            font-size: 20px;
+        }
+
+        table {
+            background-color: darkgray;
+            padding: 5px;
+        }
+
+        td,
+        th {
+            background-color: gray;
+            padding: 7px;
+        }
+
+        button {
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="myScript.js">
+        //window.onload = function () {
+        //    var element = document.createElement("script");
+        //    element.src = "myScript.js";
+        //    document.body.appendChild(element);
+        //};
+        //var myArray = ["Pedro", "Juan", "Luis", "Raul"];
+        //var myNodes = mySVG.childNodes();
+        //for (x in myNodes){
+        //    alert(myNodes[x]);
+        //}
+        //var a = mySVG.getAttributeNames;
+        //var i;
+        //for (i=0 , i <a.length ; i=i+1;)
+        //{
+        //    document.getElementById("p_1").innerHTML += "<br>" + a[i];
+        //console.log(result);
+        //var i;
+        //for (i=0; i < result.length; i++) {
+        //    console.log (result[i]);
+        //}
+        //} 
+        //document.getElementById("p_1").innerHTML = mySVG.childElementCount;
+        //var myPoly = mySVG.querySelector("polyline"); 
+    </script>
+    <script>
+        function myChangeText() {
+            document.getElementById("h1_1").innerHTML = "New Header";
+            //test with arrays -- adding elemnts to an array
+            var myArray = [];
+            var i;
+            myArray.push("hello");
+            myArray.push("how are you?");
+            myArray.push("joya");
+            for (i = 0; i < myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+        }
+        function myCreateElement() {
+            var myP = document.createElement("p");
+            var textNode = document.createTextNode("text of the created paragraph");
+            myP.appendChild(textNode);
+            var myDiv = document.getElementById("myDiv1");
+            myDiv.appendChild(myP);
+        }
+        function myChangeSVG() {
+            /*
+            var mySVG = document.getElementById("mySVG");
+            var myPoly = document.getElementById("myPoly");
+            var myCircle = mySVG.querySelector("circle");
+            let myPath = mySVG.getElementById("myPath");
+
+            mySVG.style.backgroundColor = "lightgray";
+            myPoly.points[0].x = "0";
+            myPoly.points[0].y = "0";
+            myPoly.points[4].x = "500";
+            myPoly.points[4].y = "200";
+            //console.log(myPoly.points);
+            myCircle.cx.baseVal.value = "150";
+            //console.log(myCircle);*/
+            console.log(myPath);
+            //console.log(myPath.d);
+            //myPath.d = "M 0 0 L 30 30";                
+        }
+        function myReadFile(/*file*/) { //AJAX Example with file
+            //var file 
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "myJson.json", true); //true= asynchronous
+            xhttp.onreadystatechange = function () {
+                //*4:"request finish and response ready" *200:"OK"
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var allText = xhttp.responseText;
+                    myProcessFile(allText);
+                }
+            }
+            xhttp.send();
+        }
+
+        function myProcessFile(text) {
+            let obj = JSON.parse(text);
+            let angleThreshold = obj["angle global threshold"]["act"];
+            let angleThresholdAsText = angleThreshold.toString();
+            let values = { "ang": [], "torq": [] }; //object
+            let steps = obj["tightening steps"];
+            let angMin, angMax, torqMin, torqMax;
+
+            let myCanvas = document.getElementById("myCanvas"); //CANVAS
+            let canvasWidth = 700;
+            let canvasHeight = 300;
+            let ctx = myCanvas.getContext("2d");
+            let angScale = 1;
+            let torqScale = 1;
+            let i;
+            let x, y;
+
+            myCanvas.width = canvasWidth;
+            myCanvas.height = canvasHeight;
+            //myCanvas.style.strokeWidth = "2";
+
+            /*
+            for (step of steps) { //for of example
+                values.ang = values.ang.concat(values.ang, step["graph"]["angle values"]);
+                values.torq = values.torq.concat(values.torq, step["graph"]["torque values"]);
+            }
+            */
+
+            values.ang = values.ang.concat(steps[3]["graph"]["angle values"],values.ang);
+            values.torq = values.torq.concat(steps[3]["graph"]["torque values"],values.torq);
+            
+
+            angMin = Math.min.apply(null, values.ang);
+            angMax = Math.max.apply(null, values.ang);      
+            torqMin = Math.min.apply(null, values.torq);
+            torqMax = Math.max.apply(null, values.torq);
+
+            angScale = canvasWidth / (angMax - angMin);
+            torqScale = canvasHeight / (torqMax - torqMin);
+
+            console.log("Ang:" + " min:" + angMin + " max:" + angMax + " scale:" + angScale);
+            console.log("Torq:" + " min:" + torqMin + " max:" + torqMax + " scale:" + torqScale)
+            
+            console.log(values.ang.length);
+
+            x = (values.ang[0] - angMin) * angScale;
+            y = canvasHeight - ((values.torq[0] - torqMin) * torqScale);
+            ctx.moveTo(x, y);
+
+            for (i = 0; i < values.ang.length; i++) {
+                x = (values.ang[i] - angMin) * angScale;
+                y = canvasHeight - ((values.torq[i] - torqMin) * torqScale);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            }
+
+            /* for (prop in obj) { //for in example
+                 console.log(prop);
+             }
+ 
+             console.log("format: " + obj.format); //example with dot notation
+             console.log("node id: " + obj["node id"]); //example with square brackets
+             console.log("transducer function: " + obj.MCE[0]["Transducer function"]);
+             console.log("location names: " + obj["location name"][2]);
+             console.log("program name: " + obj["prg name"]);
+             console.log("angleThreshold is a " + typeof (angleThreshold) + " " + angleThreshold);
+             console.log("angleThresholdAsText is a " + typeof (angleThresholdAsText) + " " + angleThresholdAsText);
+             console.log("this curve has " + obj["tightening steps"].length + " steps");
+             console.log("value example: " + obj["tightening steps"][0]["angle threshold"]["act"]);
+             */
+        }
+
+        function myChangeCanvas() {
+            var myCanvas = document.getElementById("myCanvas");
+            var ctx = myCanvas.getContext("2d");
+            class Values {
+                constructor(_ang, _torq) {
+                    this.ang = _ang;
+                    this.torq = _torq;
+                }
+            }
+            var values = [];
+
+            value = new Values(0.0, 0.0); 
+            values.push(value);
+            value = new Values(23.45, 56.78); 
+            values.push(value);
+            value = new Values(123.33, 125.45); 
+            values.push(value);
+
+            console.log(values);
+
+            myCanvas.width = "300"; myCanvas.heiht = "200";
+            ctx.moveTo(0, 0);
+            for (val of values) {
+                ctx.lineTo(val.ang, val.torq);
+                ctx.stroke();
+            }
+        }
+    </script>
+
+    <!--HEADER AND PARAGRAPH EXAMPLE-->
+    <div id=myDiv1>
+        <h1 id="h1_1"> Header </h1>
+        <p id="p_1"> this is the firt paragraph </p>
+        <p id="p_2"> this is the second paragraph</p>
+        <h2> Subheader </h2>
+    </div>
+    <!--BUTTONS EXAMPLE-->
+    <button id="myButton1" onclick="myCreateElement()"> create element </button>
+    <button id="myButton2" onclick="myChangeText()"> change text </button>
+    <button id="myButton3" onclick="myChangeSVG()"> change SVG </button>
+    <button id="myButton4" onclick="myReadFile()"> read file </button>
+    <button id="myButton5" onclick="myChangeCanvas()"> change canvas </button>
+    <br><br>
+    <!-- CANVAS EXAMPLE -->
+    <canvas id="myCanvas" style="border:1px solid #000000"> </canvas>
+    <br><br>
+    <!--TABLE EXAMPLE-->
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        <tr>
+            <td>
+                John
+            </td>
+            <td>
+                30
+            </td>
+        </tr>
+    </table>
+    <br>
+    <!-- SVG EXAMPLE -->
+    <svg id="mySVG" height="200" width="500">
+        <polyline id="myPoly" points="20,20 40,25 58,56 67,86 88,120"
+            style="fill:none ; stroke: black ; stroke-width: 3;" />
+        <circle cx="200" cy="50" r="40" stroke="green" stroke-width="4" fill="lightblue" />
+        <path id="myPath" stroke="green" stroke-width="0.5" fill="none" d="M 0 0 L 30 30" />
+    </svg>
+
+</body>
+
+<!--    TO DO LIST:
+        * dinamic change of size 
+        * generating points in the svg polyline
+-->
+
+</html>

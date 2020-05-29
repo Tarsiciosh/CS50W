@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Tar CSS Styling</title>
+    <style>
+        /*ol li {  every li that is within a ol*/
+        ol>li {/* inmediate children*/    
+            color: red;
+        }
+
+        input[type=text] { /* more specific*/          
+            background-color: green;
+        }
+
+        input[type=number] {
+            background-color: chocolate;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            background-color: green;
+            border: none;
+            color: lightgrey;
+        }
+
+        button:hover {
+            /*pseudo class - particular state*/
+            background-color: darkgreen;
+        }
+
+        a::before {
+            /*before the actual content */
+            content: "\21d2 Click here: ";
+            font-weight: bold;
+        }
+        p::selection{
+            color:red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>first list item</li>
+        <li>seccond list item</li>
+        <ul>
+            <li>first unorder</li>
+            <li>second unorder</li>
+        </ul>
+        <li>third list item</li>
+    </ol>
+    <ul>
+        <li>this is another list</li>
+        <li>this is anoter item</li>
+    </ul>
+
+    <form>
+        <input name="name" type="text" placeholder="First Name">
+        <input name="lastName" type="text" placeholder="Last Name">
+        <input name="age" type="number" placeholder="Age">
+    </form>
+    <br>
+    <button>click me!</button>
+    <br>
+    <ul>
+        <li><a href="#"> first link</a></li>
+        <li><a href="#"> second link</a></li>
+    </ul>
+    <p>this is a paragraph example to show the selection</p>
+
+</body>
+
+</html>
