@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Webpage</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script id="test" type="text/x-handlebars-template">
+        <div>
+            {% raw -%}
+                {{ contents }}
+            {%- endraw %}
+        </div>
+    </script>
+
+    <script src="{{ url_for('static', filename='myIndex.js') }}"></script>
+
+</head>
+
+<body>
+    <div id="main">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>                /*using arrow functions: */
+            document.addEventListener("DOMContentLoaded", () => {
+
+                document.querySelector('#submit').disabled = true;
+
+                document.querySelector("#task").onkeyup = () => {
+                    if (document.querySelector("#task").value.length > 0 )
+                        document.querySelector("#submit").disabled = false;
+                    else 
+                        document.querySelector("#submit").disabled = true;      
+                };
+
+                document.querySelector('#new-task').onsubmit = () => {
+                    const li = document.createElement('li');
+                    li.innerHTML= document.querySelector("#task").value;
+                    document.querySelector("#list").append(li);
+                    document.querySelector("#task").value = "";
+                    return false;
+                };
+            });
+        </script> 
+        <title> javascript test 1 </title>
+    </head>
+
+    <body>
+        <ul id="list">
+        </ul>
+        <form id="new-task">
+            <input id="task" autocapitalize="off" autofocus placeholder="enter new task" type="text">
+            <input id="submit" type="submit">
+        </form>
+    </body>
+</html>

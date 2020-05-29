@@ -1,0 +1,145 @@
+1589465596311	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\spa3cap\\AppData\\Local\\Temp\\rust_mozprofileqmbpOO"
+1589465598331	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1589465598331	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1589465598331	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1589465598332	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1589465598473	addons.xpi-utils	WARN	Add-on langpack-ar@firefox.mozilla.org is not compatible with application version.
+1589465598473	addons.xpi-utils	WARN	Add-on langpack-ar@firefox.mozilla.org is not compatible with application version.
+1589465598482	addons.xpi-utils	WARN	Add-on langpack-ar@firefox.mozilla.org is not compatible with application version.
+1589465598517	addons.xpi-utils	WARN	Add-on langpack-bg@firefox.mozilla.org is not compatible with application version.
+1589465598517	addons.xpi-utils	WARN	Add-on langpack-bg@firefox.mozilla.org is not compatible with application version.
+1589465598518	addons.xpi-utils	WARN	Add-on langpack-bg@firefox.mozilla.org is not compatible with application version.
+1589465598553	addons.xpi-utils	WARN	Add-on langpack-cs@firefox.mozilla.org is not compatible with application version.
+1589465598553	addons.xpi-utils	WARN	Add-on langpack-cs@firefox.mozilla.org is not compatible with application version.
+1589465598554	addons.xpi-utils	WARN	Add-on langpack-cs@firefox.mozilla.org is not compatible with application version.
+1589465598586	addons.xpi-utils	WARN	Add-on langpack-da@firefox.mozilla.org is not compatible with application version.
+1589465598586	addons.xpi-utils	WARN	Add-on langpack-da@firefox.mozilla.org is not compatible with application version.
+1589465598587	addons.xpi-utils	WARN	Add-on langpack-da@firefox.mozilla.org is not compatible with application version.
+1589465598620	addons.xpi-utils	WARN	Add-on langpack-de@firefox.mozilla.org is not compatible with application version.
+1589465598620	addons.xpi-utils	WARN	Add-on langpack-de@firefox.mozilla.org is not compatible with application version.
+1589465598620	addons.xpi-utils	WARN	Add-on langpack-de@firefox.mozilla.org is not compatible with application version.
+1589465598657	addons.xpi-utils	WARN	Add-on langpack-el@firefox.mozilla.org is not compatible with application version.
+1589465598658	addons.xpi-utils	WARN	Add-on langpack-el@firefox.mozilla.org is not compatible with application version.
+1589465598659	addons.xpi-utils	WARN	Add-on langpack-el@firefox.mozilla.org is not compatible with application version.
+1589465598695	addons.xpi-utils	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1589465598695	addons.xpi-utils	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1589465598696	addons.xpi-utils	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1589465598728	addons.xpi-utils	WARN	Add-on langpack-es-ES@firefox.mozilla.org is not compatible with application version.
+1589465598728	addons.xpi-utils	WARN	Add-on langpack-es-ES@firefox.mozilla.org is not compatible with application version.
+1589465598729	addons.xpi-utils	WARN	Add-on langpack-es-ES@firefox.mozilla.org is not compatible with application version.
+1589465598766	addons.xpi-utils	WARN	Add-on langpack-et@firefox.mozilla.org is not compatible with application version.
+1589465598766	addons.xpi-utils	WARN	Add-on langpack-et@firefox.mozilla.org is not compatible with application version.
+1589465598766	addons.xpi-utils	WARN	Add-on langpack-et@firefox.mozilla.org is not compatible with application version.
+1589465598827	addons.xpi-utils	WARN	Add-on langpack-fi@firefox.mozilla.org is not compatible with application version.
+1589465598827	addons.xpi-utils	WARN	Add-on langpack-fi@firefox.mozilla.org is not compatible with application version.
+1589465598827	addons.xpi-utils	WARN	Add-on langpack-fi@firefox.mozilla.org is not compatible with application version.
+1589465598870	addons.xpi-utils	WARN	Add-on langpack-fr@firefox.mozilla.org is not compatible with application version.
+1589465598870	addons.xpi-utils	WARN	Add-on langpack-fr@firefox.mozilla.org is not compatible with application version.
+1589465598871	addons.xpi-utils	WARN	Add-on langpack-fr@firefox.mozilla.org is not compatible with application version.
+1589465598916	addons.xpi-utils	WARN	Add-on langpack-he@firefox.mozilla.org is not compatible with application version.
+1589465598916	addons.xpi-utils	WARN	Add-on langpack-he@firefox.mozilla.org is not compatible with application version.
+1589465598917	addons.xpi-utils	WARN	Add-on langpack-he@firefox.mozilla.org is not compatible with application version.
+1589465598955	addons.xpi-utils	WARN	Add-on langpack-hr@firefox.mozilla.org is not compatible with application version.
+1589465598955	addons.xpi-utils	WARN	Add-on langpack-hr@firefox.mozilla.org is not compatible with application version.
+1589465598956	addons.xpi-utils	WARN	Add-on langpack-hr@firefox.mozilla.org is not compatible with application version.
+1589465598997	addons.xpi-utils	WARN	Add-on langpack-hu@firefox.mozilla.org is not compatible with application version.
+1589465598998	addons.xpi-utils	WARN	Add-on langpack-hu@firefox.mozilla.org is not compatible with application version.
+1589465598998	addons.xpi-utils	WARN	Add-on langpack-hu@firefox.mozilla.org is not compatible with application version.
+1589465599029	addons.xpi-utils	WARN	Add-on langpack-it@firefox.mozilla.org is not compatible with application version.
+1589465599030	addons.xpi-utils	WARN	Add-on langpack-it@firefox.mozilla.org is not compatible with application version.
+1589465599030	addons.xpi-utils	WARN	Add-on langpack-it@firefox.mozilla.org is not compatible with application version.
+1589465599072	addons.xpi-utils	WARN	Add-on langpack-ja@firefox.mozilla.org is not compatible with application version.
+1589465599072	addons.xpi-utils	WARN	Add-on langpack-ja@firefox.mozilla.org is not compatible with application version.
+1589465599073	addons.xpi-utils	WARN	Add-on langpack-ja@firefox.mozilla.org is not compatible with application version.
+1589465599114	addons.xpi-utils	WARN	Add-on langpack-ko@firefox.mozilla.org is not compatible with application version.
+1589465599114	addons.xpi-utils	WARN	Add-on langpack-ko@firefox.mozilla.org is not compatible with application version.
+1589465599115	addons.xpi-utils	WARN	Add-on langpack-ko@firefox.mozilla.org is not compatible with application version.
+1589465599156	addons.xpi-utils	WARN	Add-on langpack-lt@firefox.mozilla.org is not compatible with application version.
+1589465599156	addons.xpi-utils	WARN	Add-on langpack-lt@firefox.mozilla.org is not compatible with application version.
+1589465599157	addons.xpi-utils	WARN	Add-on langpack-lt@firefox.mozilla.org is not compatible with application version.
+1589465599194	addons.xpi-utils	WARN	Add-on langpack-lv@firefox.mozilla.org is not compatible with application version.
+1589465599194	addons.xpi-utils	WARN	Add-on langpack-lv@firefox.mozilla.org is not compatible with application version.
+1589465599194	addons.xpi-utils	WARN	Add-on langpack-lv@firefox.mozilla.org is not compatible with application version.
+1589465599233	addons.xpi-utils	WARN	Add-on langpack-nb-NO@firefox.mozilla.org is not compatible with application version.
+1589465599233	addons.xpi-utils	WARN	Add-on langpack-nb-NO@firefox.mozilla.org is not compatible with application version.
+1589465599234	addons.xpi-utils	WARN	Add-on langpack-nb-NO@firefox.mozilla.org is not compatible with application version.
+1589465599273	addons.xpi-utils	WARN	Add-on langpack-nl@firefox.mozilla.org is not compatible with application version.
+1589465599274	addons.xpi-utils	WARN	Add-on langpack-nl@firefox.mozilla.org is not compatible with application version.
+1589465599274	addons.xpi-utils	WARN	Add-on langpack-nl@firefox.mozilla.org is not compatible with application version.
+1589465599306	addons.xpi-utils	WARN	Add-on langpack-pl@firefox.mozilla.org is not compatible with application version.
+1589465599306	addons.xpi-utils	WARN	Add-on langpack-pl@firefox.mozilla.org is not compatible with application version.
+1589465599307	addons.xpi-utils	WARN	Add-on langpack-pl@firefox.mozilla.org is not compatible with application version.
+1589465599345	addons.xpi-utils	WARN	Add-on langpack-pt-BR@firefox.mozilla.org is not compatible with application version.
+1589465599345	addons.xpi-utils	WARN	Add-on langpack-pt-BR@firefox.mozilla.org is not compatible with application version.
+1589465599346	addons.xpi-utils	WARN	Add-on langpack-pt-BR@firefox.mozilla.org is not compatible with application version.
+1589465599380	addons.xpi-utils	WARN	Add-on langpack-pt-PT@firefox.mozilla.org is not compatible with application version.
+1589465599380	addons.xpi-utils	WARN	Add-on langpack-pt-PT@firefox.mozilla.org is not compatible with application version.
+1589465599380	addons.xpi-utils	WARN	Add-on langpack-pt-PT@firefox.mozilla.org is not compatible with application version.
+1589465599419	addons.xpi-utils	WARN	Add-on langpack-ro@firefox.mozilla.org is not compatible with application version.
+1589465599419	addons.xpi-utils	WARN	Add-on langpack-ro@firefox.mozilla.org is not compatible with application version.
+1589465599420	addons.xpi-utils	WARN	Add-on langpack-ro@firefox.mozilla.org is not compatible with application version.
+1589465599464	addons.xpi-utils	WARN	Add-on langpack-ru@firefox.mozilla.org is not compatible with application version.
+1589465599464	addons.xpi-utils	WARN	Add-on langpack-ru@firefox.mozilla.org is not compatible with application version.
+1589465599465	addons.xpi-utils	WARN	Add-on langpack-ru@firefox.mozilla.org is not compatible with application version.
+1589465599505	addons.xpi-utils	WARN	Add-on langpack-sk@firefox.mozilla.org is not compatible with application version.
+1589465599505	addons.xpi-utils	WARN	Add-on langpack-sk@firefox.mozilla.org is not compatible with application version.
+1589465599506	addons.xpi-utils	WARN	Add-on langpack-sk@firefox.mozilla.org is not compatible with application version.
+1589465599563	addons.xpi-utils	WARN	Add-on langpack-sl@firefox.mozilla.org is not compatible with application version.
+1589465599563	addons.xpi-utils	WARN	Add-on langpack-sl@firefox.mozilla.org is not compatible with application version.
+1589465599563	addons.xpi-utils	WARN	Add-on langpack-sl@firefox.mozilla.org is not compatible with application version.
+1589465599603	addons.xpi-utils	WARN	Add-on langpack-sv-SE@firefox.mozilla.org is not compatible with application version.
+1589465599603	addons.xpi-utils	WARN	Add-on langpack-sv-SE@firefox.mozilla.org is not compatible with application version.
+1589465599603	addons.xpi-utils	WARN	Add-on langpack-sv-SE@firefox.mozilla.org is not compatible with application version.
+1589465599645	addons.xpi-utils	WARN	Add-on langpack-th@firefox.mozilla.org is not compatible with application version.
+1589465599645	addons.xpi-utils	WARN	Add-on langpack-th@firefox.mozilla.org is not compatible with application version.
+1589465599646	addons.xpi-utils	WARN	Add-on langpack-th@firefox.mozilla.org is not compatible with application version.
+1589465599716	addons.xpi-utils	WARN	Add-on langpack-tr@firefox.mozilla.org is not compatible with application version.
+1589465599716	addons.xpi-utils	WARN	Add-on langpack-tr@firefox.mozilla.org is not compatible with application version.
+1589465599717	addons.xpi-utils	WARN	Add-on langpack-tr@firefox.mozilla.org is not compatible with application version.
+1589465599750	addons.xpi-utils	WARN	Add-on langpack-zh-CN@firefox.mozilla.org is not compatible with application version.
+1589465599750	addons.xpi-utils	WARN	Add-on langpack-zh-CN@firefox.mozilla.org is not compatible with application version.
+1589465599751	addons.xpi-utils	WARN	Add-on langpack-zh-CN@firefox.mozilla.org is not compatible with application version.
+1589465599782	addons.xpi-utils	WARN	Add-on langpack-zh-TW@firefox.mozilla.org is not compatible with application version.
+1589465599782	addons.xpi-utils	WARN	Add-on langpack-zh-TW@firefox.mozilla.org is not compatible with application version.
+1589465599783	addons.xpi-utils	WARN	Add-on langpack-zh-TW@firefox.mozilla.org is not compatible with application version.
+1589465599789	addons.xpi-utils	WARN	addMetadata: Add-on {1BC9BA34-1EED-42ca-A505-6D2F1A935BBB} is invalid: Error: File C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{1BC9BA34-1EED-42ca-A505-6D2F1A935BBB} does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:671:11) JS Stack trace: loadManifest@XPIInstall.jsm:671:11
+awaitPromise@XPIProvider.jsm:228:15
+syncLoadManifest@XPIInstall.jsm:755:22
+addMetadata@XPIDatabase.jsm:2711:32
+processFileChanges@XPIDatabase.jsm:3152:26
+checkForChanges@XPIProvider.jsm:2946:55
+startup@XPIProvider.jsm:2406:12
+callProvider@AddonManager.jsm:213:31
+_startProvider@AddonManager.jsm:649:5
+startup@AddonManager.jsm:873:14
+startup@AddonManager.jsm:3470:26
+observe@addonManager.js:70:29
+1589465599790	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1589465599793	addons.xpi-utils	WARN	addMetadata: Add-on {25A1388B-6B18-46c3-BEBA-A81915D0DE8F} is invalid: Error: File C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}.xpi does not contain a valid manifest(resource://gre/modules/addons/XPIInstall.jsm:671:11) JS Stack trace: loadManifest@XPIInstall.jsm:671:11
+awaitPromise@XPIProvider.jsm:228:15
+syncLoadManifest@XPIInstall.jsm:755:22
+addMetadata@XPIDatabase.jsm:2711:32
+processFileChanges@XPIDatabase.jsm:3152:26
+checkForChanges@XPIProvider.jsm:2946:55
+startup@XPIProvider.jsm:2406:12
+callProvider@AddonManager.jsm:213:31
+_startProvider@AddonManager.jsm:649:5
+startup@AddonManager.jsm:873:14
+startup@AddonManager.jsm:3470:26
+observe@addonManager.js:70:29
+1589465599793	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://e0c077c2-9dff-445c-bbf7-76bd52e6bfe0/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+[Child 13712, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588188481/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 13712, Chrome1589465602729	Marionette	INFO	Listening on port 56939
+1589465602861	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 12732, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588188481/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 1273[Child 12684, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588188481/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 12684, Chrome_ChildThread] WARNING: 1589465626349	Marionette	INFO	Stopped listening on port 56939
+[GP
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+U 78
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
