@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book details:
+{% endblock %}
+
+{% block body %}
+    <h2>Book Data</h2>
+    <ul>
+        <li>ISBN: {{ book.isbn }}</li>
+        <li>Title: {{ book.title }}</li>
+        <li>Author: {{ book.author}}</li>
+        <li>Year: {{ book.year }}</li>
+    </ul>
+    <h2>Reviews</h2>
+    <ul>
+        {% for review in reviews %}
+            <li> rating: {{ review.rating }}   text: {{ review.text }}   user id: {{ review.user_id }}</li>
+        {% else %}
+            <li>No reviews</li>
+        {% endfor %}
+    </ul>
+    {% if count > 0 %}
+        <h4> Goodreads: {{ count }} reviews and {{ average }} points average </h4>
+    {% else %}
+        <h4> Goodreads: no reviews </h4>
+    {% endif %}
+    <br>
+    <h3>Add a review</h3>
+    <br>
+    <form action="{{ url_for('add_review', isbn=book.isbn) }}" method="post" >
+        <div class="form-group">
+            <input class="form-control" name="text" placeholder="add a review">     
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="rating">
+                <option value=1> bad </option>
+                <option value=2> regular </option>
+                <option value=3> good </option>
+                <option value=4> very good </option>
+                <option value=5> excelent </option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-primary">Add review</button>
+        </div>
+    </form>
+
+{% endblock %}

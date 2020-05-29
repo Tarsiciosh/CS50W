@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    reviews Tar page
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h1> Books reviews Tar page </h1>
+    <h2> log in:</h2>
+    <br>
+    <form action="{{ url_for('search') }}" method="post" >
+
+        <div class="form-group">
+            <input class="form-control" name="username" placeholder="Enter your username">
+            <br>
+            <input class="form-control" type="password" name="password" placeholder="Enter your password">
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-primary">Enter</button>
+        </div>
+    </form>
+
+    <h2> or: </h2>
+
+    <a href= "{{ url_for('register') }}" > Register </a> 
+    <br> <br>
+
+    
+
+{% endblock %}
