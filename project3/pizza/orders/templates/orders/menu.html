@@ -1,0 +1,91 @@
+{% extends "orders/base.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'orders/menu.js' %}"></script>
+{% endblock %}
+
+{% block title %} 
+    Menu 
+{% endblock %}
+
+{% block body %}
+<div class="w3-container w3-content" style="max-width: 800px">
+    <h2 class="w3-text-indigo"> Make your order {{ user.first_name }}: </h2>
+    <form action="{% url 'add_item' %}" method ="post" >   
+        {% csrf_token %}
+        <div class="w3-row-padding w3-stretch" > 
+        <p class = "w3-third">
+        <label class="w3-text-blue"> Type of pizza </label>
+        <select name="pizzaType" class ="w3-select w3-border w3-text-gray">
+            {% for pizzaType in pizzaTypes %}
+                <option value="{{ pizzaType.id }}">{{ pizzaType }}</option>
+            {% endfor %}
+        </select> </p> 
+        <p class="w3-third">
+        <label class="w3-text-blue"> Toppings Type </label>
+        <select id="tt" name="toppingsType" class ="w3-select w3-border w3-text-gray">
+            {% for toppingsType in toppingsTypes %}
+                <option value="{{ toppingsType.id }}">{{ toppingsType }}</option>
+            {% endfor %}
+        </select> </p>
+        <p class="w3-third">
+        <label class="w3-text-blue"> Size </label>
+        <select name="size" class ="w3-select w3-border w3-text-gray">
+            {% for size in sizes %}
+                <option value="{{ size.id }}">{{ size }}</option>
+            {% endfor %}
+        </select> </p>
+
+        <p id="t1" class="w3-third" style ="display: none">
+        <label class="w3-text-blue"> Topping 1 </label>
+        <select name="topping1" class ="w3-select w3-border" >
+            {% for topping in toppings %}
+                <option value="{{ topping.id }}">{{ topping }}</option>
+            {% endfor %}
+        </select> </p>
+        <p id="t2" class="w3-third" style ="display: none">
+        <label> Topping 2 </label>
+        <select  name="topping2" class ="w3-select w3-border" >
+            {% for topping in toppings %}
+                <option value="{{ topping.id }}">{{ topping }}</option>
+            {% endfor %}
+        </select> </p>
+        <p id="t3" class="w3-third" style ="display: none">
+        <label> Topping 3 </label>
+        <select  name="topping3" class ="w3-select w3-border" >
+            {% for topping in toppings %}
+                <option value="{{ topping.id }}">{{ topping }}</option>
+            {% endfor %}
+        </select> </p>
+        </div>
+        <p>
+        <input type="submit" value="add item" class="w3-btn w3-blue"/></p>      
+    </form>
+    
+    <hr>
+
+    <div class = "w3-border">
+    <table class="w3-table">
+        <tr class ="w3-text-sand w3-blue"> <th> Virtual cart: </th> </tr>
+        {% for pizza in pizzas %}
+            <tr> <td> {{ pizza }} </td> </tr> 
+        {% empty %}
+            <tr> <td> no items in cart. </td> </tr> 
+        {% endfor %}
+    
+        {% if total != 0 %}
+            <tr class="w3-light-gray"> <td> <b> Total:  {{ total }} $ </b>  </tr> </td>
+        {% endif %}
+    </table>
+    </div>
+
+    <form action="{% url 'confirm_order' %}" method ="post" >
+        {% csrf_token %}
+        <p> 
+            <input type="submit" id="confirmOrder" value= "confirm order"  class="w3-btn w3-blue" />
+        </p>
+    </form>
+     
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "orders/base.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+<div class="w3-content w3-container" style="max-width:500px">
+    <h1>Welcome to pinocchio's</h1>
+
+    {% if message %}
+    <div class="w3-panel w3-card-4 w3-orange w3-text-sand">   
+        <p> {{ message }} </p> 
+    </div>
+    {% endif %}
+  
+    <div class="w3-card-4">
+        <div class="w3-container w3-blue">
+            <h3 class="w3-text-sand">Please login</h3>
+        </div>
+
+        <form action="{% url 'login' %}" method="post" class="w3-container">
+            {% csrf_token %}   
+            <p>
+            <label class="w3-text-blue">User Name</label>
+            <input name="username" type="text" class="w3-input w3-border"/> </p>
+            <p>
+            <label class="w3-text-blue">Password</label>
+            <input name="password" type="password" class="w3-input w3-border"/></p>
+            <p>
+            <input type="submit" value="Login" class="w3-btn w3-blue"/> </p>
+        </form>
+    </div>
+</div>
+{% endblock %}

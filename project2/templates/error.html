@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Error
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <br>
+    <h3>Error</h3>
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+</div>
+{% endblock %}

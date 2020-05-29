@@ -1,0 +1,28 @@
+{% extends "orders/base.html" %}
+{% load static %}
+
+{% block script %}
+{% endblock %}
+
+{% block title %} 
+    Order 
+{% endblock %}
+
+{% block body %}
+
+<div class = "w3-card-4 w3-border w3-margin">
+    <table class="w3-table">
+        <tr class ="w3-text-sand w3-green"> <th>Thank you {{ user.first_name }}, your order has been place: </th> </tr>
+        {% for pizza in pizzas %}
+            <tr> <td> {{ pizza }} </td> </tr> 
+        {% empty %}
+            <tr> <td> no items in cart. </td> </tr> 
+        {% endfor %}
+    
+        {% if order.totalPrice != 0 %}
+            <tr class="w3-light-gray"> <td> <b> Total:  {{ order.totalPrice }} $ </b>  </tr> </td>
+        {% endif %}
+    </table>
+</div>
+
+{% endblock %}
