@@ -24,6 +24,7 @@ Web Programming with Python and JavaScript
 # URI: postgres://ykdikqxszzjfkx:91e70af3b6523523b349c7a70564e385f1c1c56e431ce9177c6e0608ff1b2f4a@ec2-54-152-175-141.compute-1.amazonaws.com:5432/d9ctctlaucdee0
 
 # cd C:\Program Files\PostgreSQL\12\bin\
+- export PATH=/Library/PostgreSQL/12/bin/:$PATH (mac)
 # psql postgres://ykdikqxszzjfkx:91e70af3b6523523b349c7a70564e385f1c1c56e431ce9177c6e0608ff1b2f4a@ec2-54-152-175-141.compute-1.amazonaws.com:5432/d9ctctlaucdee0
 
 # GOODREADS:

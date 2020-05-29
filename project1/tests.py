@@ -9,7 +9,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
 
-def main():  
+def main():
     """
     # add a book to the database
     isbn = "other example"
@@ -52,6 +52,7 @@ def main():
     for book in books:
         print(f"isbn: {book.isbn} | title: {book.title} | author: {book.author} | year: {book.year}")
     """
+
     """
     # list all reviews:
     reviews = db.execute("SELECT id, book_isbn, rating, text, user_id FROM reviews").fetchall()
@@ -64,9 +65,9 @@ def main():
     txt="Kro"
     txt = "%" + txt + "%"
     print(txt)
-    books = db.execute("SELECT * FROM books WHERE isbn LIKE :isbn OR title LIKE :title OR author LIKE :author", 
+    books = db.execute("SELECT * FROM books WHERE isbn LIKE :isbn OR title LIKE :title OR author LIKE :author",
         {"isbn": txt, "title": txt, "author": txt}).fetchall()
-    
+
     for book in books:
         print(f"isbn: {book.isbn} | title: {book.title} | author: {book.author} | year: {book.year}")
     """
@@ -74,12 +75,12 @@ def main():
     """
     # search for the isbn:
     isbn = "0380811081"
-    book = db.execute("SELECT * FROM books WHERE isbn = :isbn ", 
+    book = db.execute("SELECT * FROM books WHERE isbn = :isbn ",
         {"isbn": isbn}).fetchone()
 
     print(f"isbn: {book.isbn} | title: {book.title} | author: {book.author} | year: {book.year}")
     """
-    
+
     """
     # get the reviews:
     isbn = "0380795272"
@@ -104,16 +105,16 @@ def main():
         print("you have already reviewed this book")
     """
     """
-    key="MW2WkG1pV99eR1unviQTdw" 
+    key="MW2WkG1pV99eR1unviQTdw"
     res = requests.get("https://www.goodreads.com/book/review_counts.json", params={"key": key, "isbns": "9781632168146"})
-    
+
     review = res.json()
 
     count = review ["books"][0]["work_ratings_count"]
     average = review ["books"][0]["average_rating"]
 
     print(f"count: {count} average: {average}")
-    """ 
+    """
 
 if __name__ == "__main__":
     main()
@@ -166,13 +167,12 @@ CREATE TABLE reviews (
 -- commands to Adminer:
 SELECT * FROM "users" WHERE username='David' -> worked on Adminer
 
-
 -- commands in postgre:
 
-INSERT INTO books (isbn, title, author, year) 
+INSERT INTO books (isbn, title, author, year)
 VALUES ('exampleISBN', 'Example title', 'example author', 1982);
 
-INSERT INTO users (username,password) 
+INSERT INTO users (username,password)
 VALUES ('John' , 'lololol');
 
 # e.g:  0380795272,Krondor: The Betrayal,Raymond E. Feist,1998
@@ -182,25 +182,25 @@ VALUES ('0380795272', 5, 'very good', 2);
 
 DELETE FROM books WHERE year = '1998';
 
-SELECT isbn, title, author, year, rating, text, user_id FROM books 
+SELECT isbn, title, author, year, rating, text, user_id FROM books
 INNER JOIN reviews ON reviews.book_isbn = books.isbn;
 
 SELECT * FROM books
-WHERE isbn LIKE '%as%' OR title LIKE '%as%' OR author LIKE '%as%' ; 
+WHERE isbn LIKE '%as%' OR title LIKE '%as%' OR author LIKE '%as%' ;
 
 SELECT * FROM reviews WHERE book_isbn = '0380795272';
 
 """
 
 """ diferent pages:
-- layout 
+- layout
 
 - index.html (log in or register)
-- register.html (registration) 
+- register.html (registration)
 - search.html (once your are inside)
 - book.html (all data | reviews | option to submit a new review)
             (also data from goodreads)
-            
+
 """
 
 # GOODREADS:
