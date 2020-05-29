@@ -1,0 +1,13 @@
+language: python
+python:
+    - 3.6
+install:
+    - pip install -r requirements.txt
+script:
+    - python manage.py test
+deploy:
+    provider: heroku
+    api_key: $HEROKU_API_KEY
+    app: cs50w-lecture8
+    run: python manage.py migrate
+    on: master
