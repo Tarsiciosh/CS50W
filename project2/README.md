@@ -2,24 +2,36 @@
 
 Web Programming with Python and JavaScript
 
+- cd C:\Users\spa3cap\Documents\GitHub\project2 (win)
+- cd github/CS50W/project2 (mac)
+- venv\Scripts\activate
+- pip3 install -r requirements.txt
+- set(win) export(mac) FLASK_APP=app.py
+- set(win) export(mac) FLASK_ENV=development
+
+
+
+
+
+
 
      <button class="btn btn-primary" id="enter"> Enter </button>
         <br> <br>
         <p id="text"> </p>
 
 
-        
+
         direccion:
-        
+
         Av. Pinedo 50, estacion Solá, Galpon 1, puerta 21, Barracas.
 
-        Güemes 573 Tres Arroyos 
+        Güemes 573 Tres Arroyos
 
 Castro 2230 Boedo
 
 
 
-action="{{ url_for('add_review', isbn=book.isbn) }}" method="post" 
+action="{{ url_for('add_review', isbn=book.isbn) }}" method="post"
 
 
 
@@ -30,7 +42,7 @@ action="{{ url_for('add_review', isbn=book.isbn) }}" method="post"
 document.addEventListener("DOMContentLoaded", () => {
     //document.querySelector("#header").style.color= "grey"
     clearMessage("result");
-   
+
 });
 
 
@@ -47,7 +59,7 @@ function printMessage (name, type, message) {
         mens.className = "alert alert-danger";
         mens.innerHTML = message;
     }
-} 
+}
 
 function clearMessage (name)
 {

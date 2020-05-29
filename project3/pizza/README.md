@@ -4,8 +4,8 @@ Web Programming with Python and JavaScript
 
 # First steps:
 cd C:\Users\spa3cap\Documents\GitHub\django (0)
-py -3 -m venv venv (install virtual enviroment)
-venv\Scripts\activate (activate) (1)
+py -3 -m venv venv(win) python3 -m venv venv (mac) (install virtual enviroment)
+venv\Scripts\activate(win) . venv/bin/activate (mac) (activate) (1)
 python -m pip install --upgrade pip (update pip)
 pip install Django==3.0.6
 pip3 install -r requirements.txt
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'django.contrib.admin',
 
- # (shell) 
+ # (shell)
  > python manage.py runserver   
 
 # (orders/models.py)
@@ -95,13 +95,6 @@ user.save()
 # variable route (...)
 
 # create an ajax request (...)
-    <p> 
+    <p>
         <button id="addItem" class="w3-btn w3-red"> add item </button>
     </p>
-
-
-
-
-
-
-
