@@ -77,13 +77,15 @@ def emit_test(data):
     channelId = data["channelId"]
     message = data["message"]
     name = data["name"]
+    date = data["date"]
+
     if channelId in channels:
-        messageToAdd = {"name": name, "text": message}
+        messageToAdd = {"name": name, "text": message, "date": date}
         channels[channelId]["messages"].insert(0, messageToAdd)
     else:
         print("no such channel in channels")
     print(channels)
-    emit("broadcast message", {"channelId": channelId, "message": message, "name": name}, broadcast=True)
+    emit("broadcast message", {"channelId": channelId, "message": message, "name": name, "date": date}, broadcast=True)
 
 
 # cd C:\Users\spa3cap\Documents\GitHub\project2
