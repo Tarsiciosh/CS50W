@@ -10,37 +10,22 @@ Web Programming with Python and JavaScript
 - set(win) export(mac) FLASK_ENV=development
 
 
-     <button class="btn btn-primary" id="enter"> Enter </button>
-        <br> <br>
-        <p id="text"> </p>
 
 
 
-        direccion:
-
-        Av. Pinedo 50, estacion Solá, Galpon 1, puerta 21, Barracas.
-
-        Güemes 573 Tres Arroyos
-
-Castro 2230 Boedo
-
-
+<button class="btn btn-primary" id="enter"> Enter </button>
+<br> <br>
+<p id="text"> </p>
 
 action="{{ url_for('add_review', isbn=book.isbn) }}" method="post"
 
-
-
  <div class="alert alert-danger" id="result"> </div>
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     //document.querySelector("#header").style.color= "grey"
     clearMessage("result");
 
 });
-
-
 
 function printMessage (name, type, message) {
     if (type === "success"){
@@ -55,17 +40,11 @@ function printMessage (name, type, message) {
         mens.innerHTML = message;
     }
 }
-
 function clearMessage (name)
 {
     document.querySelector("#" + name).style.display = "none"; //hide the mens
 }
-
 //"alert alert-success"
-
-
-
-
  <div id="login" class="container pt-4">
         <h1 id="header"> Welcome to Flack! </h1>
         <div class="form-inline bt-3">
