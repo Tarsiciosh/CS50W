@@ -1,7 +1,5 @@
 # CS50 - Project 2
 
-Web Programming with Python and JavaScript
-
 (win)
 - cd C:\Users\spa3cap\Documents\GitHub\flask (0)
 - venv\Scripts\activate (1)
@@ -11,7 +9,7 @@ Web Programming with Python and JavaScript
 - set FLASK_ENV=development (4)
 - flask run (5)
 
-(mac)
+(mac) (checked)
 - cd /users/Tar/frameworks/flask (0)
 - . venv/bin/activate (1)
 - pip3 install -r requirements.txt
@@ -19,6 +17,28 @@ Web Programming with Python and JavaScript
 - export FLASK_APP=app.py (3)
 - export FLASK_ENV=development (4)
 - flask run (5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <button class="btn btn-primary" id="enter"> Enter </button>
