@@ -163,27 +163,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if (socketReady == true) {
             const message = document.querySelector("#message").value;
             document.querySelector("#message").value = "";
-            socket.emit("publish message", {"channelId": myChannel.id, "message": message, "name": name});
+            console.log("sending message..")
+            const timeStamp = new Date();
+            socket.emit("publish message", {"channelId": myChannel.id, "message": message, "name": name, "date": timeStamp.toString()});
         }   
     }
-    
+
     // RECEIVING MESSAGES FROM SERVER - SOCKET IO
     socket.on("broadcast message", data => {
         if (myChannel.id == data.channelId) { //if user is in that chat
             console.log("message received from " + data.channelId)
             const myMessages = document.querySelector("#messages");
-
-       
-            const renderedMessage = messageTemplate({"name": data.name, "text": data.message, date: "today"}); 
-         
-
+            const renderedMessage = messageTemplate({"name": data.name, "text": data.message, "date": data.date}); 
             const p = document.createElement("div");
             p.innerHTML += renderedMessage;
-
             firstElement = myMessages.childNodes[0];
             myMessages.insertBefore(p,firstElement)
-    
-
             counter++;
         }
         
@@ -213,7 +208,7 @@ function updateMessages () {
         if (data.success){
             counter = start + data.readed;
             for (message of data.messages) {
-                const p = messageTemplate({"name": message.name, "text": message.text, date: "today"}); 
+                const p = messageTemplate({"name": message.name, "text": message.text, "date": message.date}); 
                 myMessages.innerHTML += p;
             }
             allowFetching = true;
