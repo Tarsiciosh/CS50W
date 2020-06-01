@@ -1,4 +1,4 @@
-# Project 2
+# CS50 - Project 2
 
 Web Programming with Python and JavaScript
 
@@ -12,10 +12,10 @@ Web Programming with Python and JavaScript
 - flask run (5)
 
 (mac)
-- cd users/Tar/frameworks/flask (0)
+- cd /users/Tar/frameworks/flask (0)
 - . venv/bin/activate (1)
 - pip3 install -r requirements.txt
-- cd github/CS50W/project2 (2)
+- cd /users/Tar/github/CS50W/project2 (2)
 - export FLASK_APP=app.py (3)
 - export FLASK_ENV=development (4)
 - flask run (5)
