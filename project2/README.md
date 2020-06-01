@@ -10,11 +10,6 @@ Web Programming with Python and JavaScript
 - set(win) export(mac) FLASK_ENV=development
 
 
-
-
-
-
-
      <button class="btn btn-primary" id="enter"> Enter </button>
         <br> <br>
         <p id="text"> </p>
