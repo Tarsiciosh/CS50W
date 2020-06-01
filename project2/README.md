@@ -2,15 +2,23 @@
 
 Web Programming with Python and JavaScript
 
-- cd C:\Users\spa3cap\Documents\GitHub\project2 (win)
-- cd github/CS50W/project2 (mac)
-- venv\Scripts\activate
+(win)
+- cd C:\Users\spa3cap\Documents\GitHub\flask (0)
+- venv\Scripts\activate (1)
 - pip3 install -r requirements.txt
-- set(win) export(mac) FLASK_APP=app.py
-- set(win) export(mac) FLASK_ENV=development
+- cd C:\Users\spa3cap\Documents\GitHub\project2 (2)
+- set FLASK_APP=app.py (3)
+- set FLASK_ENV=development (4)
+- flask run (5)
 
-
-
+(mac)
+- cd users/Tar/frameworks/flask (0)
+- . venv/bin/activate (1)
+- pip3 install -r requirements.txt
+- cd github/CS50W/project2 (2)
+- export FLASK_APP=app.py (3)
+- export FLASK_ENV=development (4)
+- flask run (5)
 
 
 <button class="btn btn-primary" id="enter"> Enter </button>
