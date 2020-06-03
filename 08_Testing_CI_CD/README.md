@@ -25,16 +25,20 @@ self.assertTrue(f.is_valid_flight())
 # test the models (airline1 - didn't work):
 (flights/models.py - Flight class)
 - check data before saving it in the db:
+
+
 def clean(self):
     if self.origin == self.destination:
         raise ValidationError("Origin and destination must be different.")
     elif self.duration < 1:
         raise ValidationError("Duration must be positive.")
-def save(self, *args, **kwargs):
+def save(self, *-args, **-kwargs) :
     self.clean()
 
     # This syntax now calls Django's own "save" function, adding this data to the DB (if `clean` was ok).
-    super().save(*args, **kwargs)
+    super().save(*-args, **-kwargs)
+
+(note: remove the "-" after the star)
 
 # test the views (airline2):
 (flights/tests.py)
@@ -48,12 +52,12 @@ def test_index(self):
 >> python manage.py test
 
 # selenium:
-> cd c:\Users\spa3cap\Documents\GitHub\django 
+> cd c:\Users\spa3cap\Documents\GitHub\django
 > venv\Scripts\activate
 >> pip install selenium
-- download the geckodriver for firefox 
-- put it in C:\WebDriver\bin 
-> setx /m path "%path%;C:\WebDriver\bin\" 
+- download the geckodriver for firefox
+- put it in C:\WebDriver\bin
+> setx /m path "%path%;C:\WebDriver\bin\"
 >> python manage.py test
 
 # CI-CD (airline3)
@@ -71,11 +75,11 @@ script:
 
 # Heroku (ariline3 - didn't work)
 - follow the instructions of the class note
-settings (avatar) > account 
+settings (avatar) > account
 
 
 # Docker (airline4)
-- install docker desktop 
+- install docker desktop
 - add it to the PATH (windows)
 cd c:\Users\spa3cap\Documents\GitHub\lecture8\airline4
 > docker-compose up
@@ -84,8 +88,4 @@ go to 0.0.0.0:8000 to see the running website
 > docker exec -it <containerid> bash -l
 root@dfj..> python manage.py shell (for example)
 
-# 
-
-
-
-
+#
