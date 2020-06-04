@@ -1,2 +1,2 @@
 # CS50W
-all folders in one place
+all folders in one place 
