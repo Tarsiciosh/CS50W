@@ -73,7 +73,7 @@ script:
 
 - commit changes and see the result-
 
-# Heroku (ariline3 - didn't work)
+# Heroku (ariline3 - (didn't work)
 - follow the instructions of the class note
 settings (avatar) > account
 

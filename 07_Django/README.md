@@ -3,12 +3,12 @@ Lecture 7:
 
 # First steps:
 
-cd C:\Users\spa3cap\Documents\GitHub\django (0)
-py -3 -m venv venv (install virtual enviroment)
-venv\Scripts\activate (activate) (1)
-python -m pip install --upgrade pip (update pip)
-pip install Django==3.0.6
-cd c:\Users\spa3cap\Documents\Github\lecture7\djangoair
+$ cd C:\Users\spa3cap\Documents\GitHub\django (0)
+$ py -3 -m venv venv (install virtual enviroment)
+$ venv\Scripts\activate (activate) (1)
+$ python -m pip install --upgrade pip (update pip)
+$ pip install Django==3.0.6
+$ cd c:\Users\spa3cap\Documents\Github\lecture7\djangoair
 
 # Walk through:
 
